@@ -121,7 +121,7 @@ public class GameServer {
         for (Portal portal : allPortal){
             System.out.println(portal);
         }
-        System.out.println("포탈을 하나 골라주세요: ");
+        System.out.print("포탈을 하나 골라주세요: ");
         int choose = sc.nextInt();
         character.changePortal(portalRepository.findByPortalId((long) choose));
 

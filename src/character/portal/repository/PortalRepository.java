@@ -10,10 +10,4 @@ public interface PortalRepository {
 
     Portal findByPortalId(Long id);
 
-
-
-
-
-
-
 }
