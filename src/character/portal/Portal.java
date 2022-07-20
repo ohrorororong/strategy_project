@@ -18,6 +18,7 @@ public abstract class Portal {
     }
 
 
+
     @Override
     public String toString() {
         return "Portal{" +
