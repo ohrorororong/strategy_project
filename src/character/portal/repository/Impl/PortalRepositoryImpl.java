@@ -6,7 +6,6 @@ import character.portal.product.HuntingGround;
 import character.portal.repository.PortalRepository;
 
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
