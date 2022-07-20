@@ -2,6 +2,7 @@ package character;
 
 import character.portal.Portal;
 import character.job.Job;
+import character.pet.Pet;
 import character.weapon.Weapon;
 
 public class GameCharacter {
@@ -10,6 +11,7 @@ public class GameCharacter {
     // 맵
     private Portal portal;
     // 펫
+    private Pet pet; // 펫
 
     // 현재 무기 정보 보여주기
     public void currentWeaponInfoShow() {
@@ -59,11 +61,18 @@ public class GameCharacter {
     }
 
     // 펫 - 변경
+    public void changedPet(Pet pet) {
+        if (pet != null) {
+            this.pet = pet;
+        }
+    }
+
 
     @Override
     public String toString() {
         return "GameCharacter{" +
                 "weapon=" + weapon +
+                ", pet=" + pet +
                 ", portal=" + portal +
                 ", job=" + job +
                 '}';
