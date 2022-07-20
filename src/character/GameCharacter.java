@@ -1,5 +1,6 @@
 package character;
 
+import character.portal.Portal;
 import character.job.Job;
 import character.weapon.Weapon;
 
@@ -7,6 +8,7 @@ public class GameCharacter {
     private Weapon weapon; // 무기
     private Job job;// 직업
     // 맵
+    private Portal portal;
     // 펫
 
 
@@ -29,6 +31,10 @@ public class GameCharacter {
     }
     // 직업 - 변경
     // 맵 - 이동
+    public void movePortal(){
+        portal.move();
+    }
+
     // 펫 - 변경
 
     //////////////////////////////////////////////////////
@@ -47,16 +53,20 @@ public class GameCharacter {
     }
 
     // 맵 - 변경
+    public void changePortal(Portal portal){
+        if(portal != null){
+            this.portal = portal;
+        }
+    }
+
     // 펫 - 변경
 
     @Override
     public String toString() {
         return "GameCharacter{" +
                 "weapon=" + weapon +
+                ", portal=" + portal +
                 ", job=" + job +
                 '}';
     }
-
-
-
 }

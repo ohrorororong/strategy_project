@@ -1,6 +1,10 @@
 package server;
 
 import character.GameCharacter;
+import character.portal.Portal;
+import character.portal.repository.*;
+
+import character.portal.repository.Impl.PortalRepositoryImpl;
 import character.job.Job;
 import character.job.repsitory.Impl.JobRepositoryImpl;
 import character.job.repsitory.JobRepository;
@@ -13,6 +17,7 @@ import java.util.Scanner;
 public class GameServer {
 
     private final WeaponRepository weaponRepository;
+    private final PortalRepository portalRepository = new PortalRepositoryImpl();
     private final JobRepository jobRepository = new JobRepositoryImpl();
 
     private Scanner sc = new Scanner(System.in);
@@ -127,6 +132,13 @@ public class GameServer {
 
     private void selectMenu6() {
         System.out.println("[6]. 맵 선택하기를 선택하였습니다.");
+        List<Portal> allPortal = portalRepository.findAllMap();
+        for (Portal portal : allPortal){
+            System.out.println(portal);
+        }
+        System.out.println("포탈을 하나 골라주세요: ");
+        int choose = sc.nextInt();
+        character.changePortal(portalRepository.findByPortalId((long) choose));
     }
 
     private void selectMenu7() {
