@@ -8,6 +8,10 @@ public interface PortalRepository {
 
     List<Portal> findAllMap();
 
+    Portal findByPortalId(Long id);
+
+
+
 
 
 
