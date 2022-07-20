@@ -3,6 +3,7 @@ package character.portal.repository.Impl;
 import character.portal.Portal;
 import character.portal.product.Hospital;
 import character.portal.product.HuntingGround;
+import character.portal.repository.PortalRepository;
 
 
 import java.util.ArrayList;
@@ -25,8 +26,6 @@ public class PortalRepositoryImpl implements PortalRepository {
         store.put(1L , new Hospital("병원", "병원입니다."));
         store.put(2L , new HuntingGround("사냥터", "사냥터입니다."));
     }
-
-
 
 
     @Override
