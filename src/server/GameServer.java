@@ -52,15 +52,15 @@ public class GameServer {
     }
 
     private void process(int menu) {
-        switch (menu) {
-            case 1 -> selectMenu1();
-            case 2 -> selectMenu2();
-            case 3 -> selectMenu3();
-            case 4 -> selectMenu4();
-            case 5 -> selectMenu5();
-            case 6 -> selectMenu6();
-            case 7 -> selectMenu7();
-        }
+//        switch (menu) {
+//            case 1 -> selectMenu1();
+//            case 2 -> selectMenu2();
+//            case 3 -> selectMenu3();
+//            case 4 -> selectMenu4();
+//            case 5 -> selectMenu5();
+//            case 6 -> selectMenu6();
+//            case 7 -> selectMenu7();
+//        }
     }
 
     private void selectMenu1() {
