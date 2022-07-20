@@ -1,6 +1,6 @@
 package character.pet;
 
-abstract public class Pet {
+public abstract class Pet {
     private String name;
     private String introduce;
 

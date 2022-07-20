@@ -132,7 +132,7 @@ public class GameServer {
         System.out.println(character.toString());
     }
     private void selectMenu77() {
-        System.out.println("[77] 펫 선택하기를 선택하셧ㅆ으");
+        System.out.println("[77] 펫 선택하기를 선택하셨습니다.");
         List<Pet> allPet = petRepository.findAllPet();
         allPet.forEach(System.out::println);
         System.out.println("귀여운 펫을 선택해 주세요: ");
