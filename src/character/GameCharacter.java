@@ -1,13 +1,13 @@
 package character;
 
+import character.pet.Pet;
 import character.weapon.Weapon;
 
 public class GameCharacter {
     private Weapon weapon; // 무기
     // 직업
     // 맵
-    // 펫
-
+    private Pet pet; // 펫
 
     // 현재 무기 정보 보여주기
     public void currentWeaponInfoShow() {
@@ -38,12 +38,18 @@ public class GameCharacter {
     // 직업 - 변경
     // 맵 - 변경
     // 펫 - 변경
+    public void changedPet(Pet pet) {
+        if (pet != null) {
+            this.pet = pet;
+        }
+    }
 
 
     @Override
     public String toString() {
         return "GameCharacter{" +
                 "weapon=" + weapon +
+                ", pet=" + pet +
                 '}';
     }
 }
