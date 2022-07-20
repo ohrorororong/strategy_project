@@ -11,7 +11,6 @@ public class GameCharacter {
     private Portal portal;
     // 펫
 
-
     // 현재 무기 정보 보여주기
     public void currentWeaponInfoShow() {
         weapon.showWeaponInfo();
