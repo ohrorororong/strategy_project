@@ -3,7 +3,7 @@ package character.portal.repository.Impl;
 import character.portal.Portal;
 import character.portal.product.Hospital;
 import character.portal.product.HuntingGround;
-import character.portal.repository.PortalRepository;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,5 +32,10 @@ public class PortalRepositoryImpl implements PortalRepository {
     @Override
     public List<Portal> findAllMap() {
         return new ArrayList<>(store.values());
+    }
+
+    @Override
+    public Portal findByPortalId(Long id) {
+        return store.get(id);
     }
 }
