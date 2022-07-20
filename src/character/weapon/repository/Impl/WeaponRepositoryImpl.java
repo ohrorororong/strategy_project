@@ -1,6 +1,7 @@
 package character.weapon.repository.Impl;
 
 import character.weapon.Weapon;
+import character.weapon.product.Bow;
 import character.weapon.product.Sword;
 import character.weapon.repository.WeaponRepository;
 
@@ -18,7 +19,8 @@ public class WeaponRepositoryImpl implements WeaponRepository {
     }
 
     private void weaponInit() {
-        store.put(1L, new Sword("기본 칼222", "초보자용 입니다."));
+        store.put(1L, new Sword("칼", "초보자용 입니다."));
+        store.put(2L, new Bow("활", "초보자용 입니다."));
     }
 
     @Override
