@@ -110,6 +110,8 @@ public class GameServer {
 
     private void selectMenu3() {
         System.out.println("[3]. 맵 리스트 보기를 선택하였습니다.");
+        List<Portal> allPortal = portalRepository.findAllMap();
+        allPortal.forEach(System.out::println);
     }
 
     private void selectMenu4() {
