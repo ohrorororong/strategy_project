@@ -1,3 +1,4 @@
 package character.pet;
-public class PEt {
+
+public class Pet {
 }
