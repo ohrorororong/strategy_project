@@ -1,6 +1,9 @@
 package server;
 
 import character.GameCharacter;
+import character.job.Job;
+import character.job.repsitory.Impl.JobRepositoryImpl;
+import character.job.repsitory.JobRepository;
 import character.weapon.Weapon;
 import character.weapon.repository.WeaponRepository;
 
@@ -10,6 +13,8 @@ import java.util.Scanner;
 public class GameServer {
 
     private final WeaponRepository weaponRepository;
+    private final JobRepository jobRepository = new JobRepositoryImpl();
+
     private Scanner sc = new Scanner(System.in);
     private final GameCharacter character;
 
@@ -53,13 +58,36 @@ public class GameServer {
 
     private void process(int menu) {
         switch (menu) {
-            case 1 -> selectMenu1();
-            case 2 -> selectMenu2();
-            case 3 -> selectMenu3();
-            case 4 -> selectMenu4();
-            case 5 -> selectMenu5();
-            case 6 -> selectMenu6();
-            case 7 -> selectMenu7();
+            case 1:
+                selectMenu1();
+                break;
+            case 2:
+                selectMenu2();
+                break;
+            case 3:
+                selectMenu3();
+                break;
+            case 4:
+                selectMenu4();
+                break;
+            case 5:
+                selectMenu5();
+                break;
+            case 6:
+                selectMenu6();
+                break;
+            case 7:
+                selectMenu7();
+                break;
+            default:
+
+//            case 1 -> selectMenu1();
+//            case 2 -> selectMenu2();
+//            case 3 -> selectMenu3();
+//            case 4 -> selectMenu4();
+//            case 5 -> selectMenu5();
+//            case 6 -> selectMenu6();
+//            case 7 -> selectMenu7();
         }
     }
 
@@ -71,6 +99,8 @@ public class GameServer {
 
     private void selectMenu2() {
         System.out.println("[2]. 직업 리스트 보기를 선택하였습니다.");
+        List<Job> allJob = jobRepository.findAllJob();
+        allJob.forEach(System.out::println);
     }
 
     private void selectMenu3() {
@@ -88,6 +118,11 @@ public class GameServer {
 
     private void selectMenu5() {
         System.out.println("[5]. 직업 선택하기를 선택하였습니다.");
+        List<Job> allJob = jobRepository.findAllJob();
+        allJob.forEach(System.out::println);
+        System.out.print("직업을 하나 골라주세요: ");
+        int choose = sc.nextInt();
+        character.changedJob(jobRepository.findByJobId((long) choose));
     }
 
     private void selectMenu6() {

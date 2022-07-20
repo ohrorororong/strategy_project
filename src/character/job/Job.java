@@ -9,6 +9,11 @@ public abstract class Job {
         this.info = info;
     }
 
+    public void showJobInfo() {
+        System.out.println("현재 직업 정보입니다.");
+        System.out.println(info);
+    }
+
     public abstract void skill();
 
 

@@ -8,5 +8,5 @@ public interface JobRepository {
 
     List<Job> findAllJob();
 
-//    Job findByJobId(Long id);
+    Job findByJobId(Long id);
 }

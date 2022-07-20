@@ -26,4 +26,9 @@ public class JobRepositoryImpl implements JobRepository {
     public List<Job> findAllJob() {
         return new ArrayList<>(store.values());
     }
+
+    @Override
+    public Job findByJobId(Long id) {
+        return store.get(id);
+    }
 }
