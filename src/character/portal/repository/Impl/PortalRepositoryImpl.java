@@ -3,6 +3,7 @@ package character.portal.repository.Impl;
 import character.portal.Portal;
 import character.portal.product.Hospital;
 import character.portal.product.HuntingGround;
+import character.portal.repository.PortalRepository;
 
 
 
